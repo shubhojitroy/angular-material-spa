@@ -1,0 +1,40 @@
+@import "../sass/css-components/variables";
+
+mat-toolbar {
+  background: $text-color-primary;
+  box-shadow: 0 2px 4px rgba($color-black, 0.08),
+    0 4px 12px rgba($color-black, 0.08);
+  border-top: 1px solid $color-white;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  color: $color-white;
+}
+
+img {
+  width: 120px;
+  object-fit: contain;
+  margin: 0.2275em auto 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+p {
+  color: $color-white;
+}
+
+p a {
+  cursor: pointer;
+  color: $color-white;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  mat-toolbar {
+    display: grid;
+    grid-template-columns: auto;
+    height: 65px;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../sass/css-components/variables";
+@import "../../sass/css-components/mixins";
+@import "../../sass/css-components/animations";
+@import "../../sass/css-components/popup";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+form {
+  // width: 600px;
+  padding: 2rem;
+  // border-radius: 5px;
+  // border: 1px solid $form-border;
+  // border-radius: 12px;
+  @include clearfix;
+}
+
+h3 {
+  color: $text-color-primary;
+  text-align: center;
+  margin-bottom: 0.8rem;
+
+  @include headingMain;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewY(-10deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+fieldset {
+  background: $fieldset-bg;
+  padding: 8px 10px;
+  border: none;
+  animation: moveInRight 2s ease-out;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+label {
+  cursor: pointer;
+  text-align: left;
+}
+
+input,
+textarea {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  border: 1px solid rgba($input-border, 0.4);
+}
+
+button {
+  padding: 6px;
+  font-size: 0.9rem;
+  background: $text-color-primary;
+  color: #fff;
+  border: 1px solid $border-color-primary;
+  border-radius: 10rem;
+  margin-top: 10px;
+  padding: /*0.35rem 0.8rem;*/ 0.75rem 1.275rem;
+  display: block;
+  float: left;
+}
+.para-text {
+  text-align: left;
+  margin: 0 2rem 2rem;
+}
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+menu a {
+  font: inherit;
+  cursor: pointer;
+  background-color: $text-color-primary;
+  border-radius: 10rem;
+  border: none;
+  padding: /*0.35rem 0.8rem;*/ 0.75rem 1.275rem;
+  font-size: 0.9rem;
+  color: $color-white;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+
+menu a:hover,
+menu a:active {
+  background-color: $text-color-hover;
+}
+
+menu a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+menu a:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  input,
+  textarea {
+    padding: 2px 5px;
+    font-size: 0.875rem;
+  }
+  button {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.725rem;
+  }
+  .para-text {
+    margin: 0 2rem 2vw;
+  }
+  menu a {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.725rem;
+  }
+}
+
+@media (max-width: 400px) {
+  input,
+  textarea {
+    padding: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  button {
+    font-size: 0.67rem;
+  }
+}

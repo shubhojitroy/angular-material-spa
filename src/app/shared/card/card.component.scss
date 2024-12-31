@@ -1,0 +1,42 @@
+@import "../../sass/css-components/variables";
+
+main {
+  display: flex;
+  flex-direction: column;
+  // display: grid;
+  // grid-template-rows: 1fr;
+  /*align-items: center;*/
+  gap: 1rem;
+  width: 90%;
+  max-width: 50rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-height: 63vh;
+  overflow: auto;
+  /* background-color: #3a2c54; */
+  /*text-align: center;*/
+  background: #fffc00; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $color-white,
+    /* #fffc00*/ #e2eff9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $color-white,
+    /* #fffc00*/ #e2eff9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 1px 8px rgba($color-black, 0.6);
+}
+
+article {
+  background-color: transparent;
+  border-radius: 12px;
+  color: $text-color-primary;
+}
+
+p,
+ul li {
+  text-wrap: auto;
+  font-size: 0.875rem;
+}
